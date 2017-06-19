@@ -3,7 +3,7 @@ package moe.lisp;
 /**
  * テスト対象の例．下記引用元のリスト1.11を元に一部改変．
  * 渡辺 著『JUnit実践入門』技術評論社, p.21 (2012).
- * @author y-takata
+ * @author tanaka.taishiro(20170615)
  */
 public class Calculator {
     /**
@@ -20,12 +20,15 @@ public class Calculator {
      * @return a, b, cの最大値
      */
     public int max(int a, int b, int c) {
+        /*練習1c*/
         int x;
         if (a > b) {
             if (b > c) {
                 x = a;
-            } else {
+            } else if (c > a) {
                 x = c;
+            } else {
+                x = a;
             }
         } else {
             if (b > c) {
